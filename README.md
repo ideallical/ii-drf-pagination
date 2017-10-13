@@ -47,5 +47,5 @@ Setting `II_DRF_PAGINATION['LABEL_CURRENT_PAGE_NUMBER']` to `'current_page'`
 will label te current page number of the pagination to `'current_page'` (
 instead of the default label, which is `'current_page_number'`).
 
-[pypi-version]: https://img.shields.io/pypi/v/ii_tools.svg
-[pypi]: https://pypi.python.org/pypi/ii_tools
+[pypi-version]: https://img.shields.io/pypi/v/ii-drf-pagination.svg
+[pypi]: https://pypi.python.org/pypi/ii-drf-pagination
