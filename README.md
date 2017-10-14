@@ -9,30 +9,29 @@
 ## Installation
 
 Install using `pip`...
-
-    pip install ii-drf-pagination
-
+```shell
+$ pip install ii-drf-pagination
+```
 
 ## Example
 
 Let's take a look at a quick example of using ii-drf-pagination's pagination
-class in your django restframework setup:
+class in your django-restframework setup:
 
 ```python
+REST_FRAMEWORK = {
+    [...]
+    'DEFAULT_PAGINATION_CLASS': (
+        'ii_drf_pagination.pagination.IIDRFPagination'),
+    'PAGE_SIZE': 20,
+    [...]
+}
 
-    REST_FRAMEWORK = {
-        [...]
-        'DEFAULT_PAGINATION_CLASS': (
-            'ii_drf_pagination.pagination.IIDRFPagination'),
-        'PAGE_SIZE': 20,
-        [...]
-    }
-
-    II_DRF_PAGINATION = {
-        'PAGE_SIZE_QUERY_PARAM': 'page_size',
-        'INCLUDE_PAGE_LINKS': False,
-        'LABEL_CURRENT_PAGE_NUMBER': 'current_page'
-    }
+II_DRF_PAGINATION = {
+    'PAGE_SIZE_QUERY_PARAM': 'page_size',
+    'INCLUDE_PAGE_LINKS': False,
+    'LABEL_CURRENT_PAGE_NUMBER': 'current_page'
+}
 ```
 
 Setting `II_DRF_PAGINATION['PAGE_SIZE_QUERY_PARAM']` to `'page_size'` will
